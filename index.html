@@ -87,6 +87,8 @@ a{
     font-family: "Rubik", sans-serif;
   font-style: normal;
 }
+h1{
+}
 #bod{
     text-align:center;
 }
@@ -94,9 +96,10 @@ a{
     margin:auto;
 }
 img{
-    display: block;
+    display: inline;
 	margin: auto;
-	width: 80%;
+	width: 53%;
+	float:left;
 }
 #pro{
     width:100%;
@@ -109,17 +112,21 @@ img{
     height:10px;
 }
 .but{
-    width:100%;
+    display: block;
+    width:48%;
     border:none;
-    margin:none;
+    margin:auto;
     outline:none;
-    height:3em;
+    height:7.5%;
     cursor:pointer;
     text-align:left;
-    padding:1em;
+    padding:5%;
+    margin:1%;
     font-family: "Rubik", sans-serif;
   font-style: bold;
-  font-size:165px;
+  font-size:20px;
+  float:left;
+  overflow-y:hidden;
 }
 #b1{
     background:rgb(216, 140, 154);
@@ -136,6 +143,20 @@ img{
 #b4{
     background:rgb(142, 125, 190);
     color:white;
+}
+.fot{
+    padding-left:1em;
+    padding-right:1em;
+}
+.lef{
+    float:left;
+}
+.rig{
+    float:right;
+}
+a{
+    color:rgb(142, 125, 190);
+    text-decoration:none;
 }
 
 }
@@ -408,6 +429,12 @@ img{
 ]
     var fi = function(txte){
         return document.getElementById(txte);
+    }
+    var w = window.innerWidth;
+    if(w<1200){
+        fi("img").innerHTML = "<h2 id='Q'>Question Question Question</h2><img src='https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/animals/cat.png'>";
+    }else{
+        fi("img").innerHTML = "<img src='https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/animals/cat.png'><h2 id='Q'>Question Question Question</h2>";
     }
     
     </script>
